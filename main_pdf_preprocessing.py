@@ -315,16 +315,16 @@ def main():
     #           target_dir=CLEANED_PDFS_DIR)
  
     # Step 2: Validate PDFs
-    valid_pdfs = validate_pdfs(source_dir=CLEANED_PDFS_DIR,
-                               save_report_dir=BASE_DIR)
+    #valid_pdfs = validate_pdfs(source_dir=CLEANED_PDFS_DIR,
+    #                           save_report_dir=BASE_DIR)
 #
     # Step 3: Run OCR only on valid PDFs
-    perform_ocr_with_validation(source_files=valid_pdfs,
-                                target_dir=RAW_OCR_DIR,
-                                save_reports_dir=BASE_DIR)
+    #perform_ocr_with_validation(source_files=valid_pdfs,
+    #                            target_dir=RAW_OCR_DIR,
+    #                            save_reports_dir=BASE_DIR)
 
     # Step 4: Merge OCR results
-    #post_process_ocr(source_dir=RAW_OCR_DIR, target_dir=MD_DIR,excel_filepath= "H://python_projects//scientific//pdt_paper_filter//#papers_list.xlsx")
+    post_process_ocr(source_dir=RAW_OCR_DIR, target_dir=MD_DIR,excel_filepath=r"H:\python_projects\scientific\PDT_DATA_FILES\excels\papers_all.xlsx")
 
     print("Pipeline finished.")
 
